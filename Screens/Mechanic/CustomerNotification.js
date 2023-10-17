@@ -55,7 +55,7 @@ const CustomerNotification = () => {
       setcondition(false);
     } catch (err) {
       console.log(err.response.data.message);
-      alert('Error');
+      Alert.alert('Error');
     }
   };
 
@@ -66,7 +66,7 @@ const CustomerNotification = () => {
         `${port.herokuPort}/MechanicAfterAcceptingNotification/deleteNotification/${id}`,
       );
 
-      alert('Deleted successfully');
+      Alert.alert('Deleted successfully');
     } catch (err) {
       console.log(err.response.message);
     }
@@ -194,7 +194,7 @@ const CustomerNotification = () => {
               <TouchableOpacity
                 onPress={() => {
                   if (userReview.length === 0 || userRating === 0) {
-                    alert('Review and Rating can not be empty');
+                    Alert.alert('Review and Rating can not be empty');
                   } else {
                     console.log(userRating);
                     postReview();

@@ -48,7 +48,7 @@ const AdminNotification = () => {
       setcondition(false);
     } catch (err) {
       console.log(err.response.data.message);
-      alert('Error');
+      Alert.alert('Error');
     }
   };
 

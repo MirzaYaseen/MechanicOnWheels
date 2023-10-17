@@ -47,7 +47,7 @@ const CartScreen = ({navigation}) => {
       setcondition(false);
     } catch (err) {
       console.log(err.response.data.message);
-      alert('Error');
+      Alert.alert('Error');
     }
   };
 
@@ -57,7 +57,7 @@ const CartScreen = ({navigation}) => {
         `${port.herokuPort}/cart/deleteCartProduct/${id}`,
       );
 
-      alert('Deleted successfully');
+      Alert.alert('Deleted successfully');
     } catch (err) {
       console.log(err.response.message);
     }
@@ -73,7 +73,7 @@ const CartScreen = ({navigation}) => {
         cartData,
       );
 
-      alert('Cart Updated successfully');
+      Alert.alert('Cart Updated successfully');
       setcartModalVisible(false);
       navigation.navigate('CartScreen');
     } catch (err) {
@@ -372,7 +372,7 @@ const CartScreen = ({navigation}) => {
                               const displayNumber = NewNumber.toString();
                               setQuantity(displayNumber);
                             } else {
-                              alert('Quantity Must be atleast 1');
+                              Alert.alert('Quantity Must be atleast 1');
                             }
                           }}>
                           <Text
@@ -409,7 +409,7 @@ const CartScreen = ({navigation}) => {
                               const displayNumber = NewNumber.toString();
                               setQuantity(displayNumber);
                             } else {
-                              alert('Product limit reach');
+                              Alert.alert('Product limit reach');
                             }
                           }}>
                           <Text

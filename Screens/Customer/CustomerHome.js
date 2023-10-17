@@ -9,6 +9,7 @@ import {
   Modal,
   Pressable,
   Alert,
+  ScrollView
 } from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import {SliderBox} from 'react-native-image-slider-box';
@@ -23,7 +24,7 @@ import CartProvider from '../ContextApi/contextApi';
 import {Font, Commonstyles} from '../font/Font';
 import Loader from '../Loader/Loader';
 import Lottie from 'lottie-react-native';
-import {ScrollView} from 'react-native-gesture-handler';
+
 import port from '../Port/Port';
 const CustomerHome = ({navigation}) => {
   // const socket = useRef();
@@ -44,33 +45,41 @@ const CustomerHome = ({navigation}) => {
       'https://www.investopedia.com/thmb/expg8128rWcMNUqI9CNhURkoto0=/1920x1080/filters:fill(auto,1)/162971_VE-ALT_howToSellCar-5a8dd0c4d8fdd50037949800.jpg',
     ]);
     return (
-      <SliderBox
-        images={getImage}
-        sliderBoxHeight={130}
-        onCurrentImagePressed={index => console.warn(`image ${index} pressed`)}
-        dotColor="#0e98f1"
-        inactiveDotColor="white"
-        paginationBoxVerticalPadding={10}
-        autoplay
-        circleLoop
-        resizeMethod={'resize'}
-        resizeMode={'cover'}
-        paginationBoxStyle={{
-          position: 'absolute',
-          bottom: 0,
-          padding: 0,
-          alignItems: 'center',
-          alignSelf: 'center',
-          justifyContent: 'center',
-        }}
-        ImageComponentStyle={{
-          borderRadius: 15,
-          width: '92%',
-          marginTop: 10,
-          height: 150,
-        }}
-        imageLoadingColor="#2196F3"
-      />
+      <View>
+        <Image
+          source={{
+            uri: 'https://kiamotors-portqasim.com/wp-content/uploads/2020/03/Full-Car-Service.jpg',
+          }}
+          style={{borderRadius: 15, width: '92%', marginTop: 10, height: 150, justifyContent:'center', alignSelf:'center', marginBottom:20}}
+        />
+      </View>
+      // <SliderBox
+      //   images={getImage}
+      //   sliderBoxHeight={130}
+      //   onCurrentImagePressed={index => console.warn(`image ${index} pressed`)}
+      //   dotColor="#0e98f1"
+      //   inactiveDotColor="white"
+      //   paginationBoxVerticalPadding={10}
+      //   autoplay
+      //   circleLoop
+      //   resizeMethod={'resize'}
+      //   resizeMode={'cover'}
+      //   paginationBoxStyle={{
+      //     position: 'absolute',
+      //     bottom: 0,
+      //     padding: 0,
+      //     alignItems: 'center',
+      //     alignSelf: 'center',
+      //     justifyContent: 'center',
+      //   }}
+      //   ImageComponentStyle={{
+      //     borderRadius: 15,
+      //     width: '92%',
+      //     marginTop: 10,
+      //     height: 150,
+      //   }}
+      //   imageLoadingColor="#2196F3"
+      // />
     );
   };
 
@@ -353,6 +362,8 @@ const CustomerHome = ({navigation}) => {
   };
 
   return (
+    <ScrollView>
+
     <View style={styles.topContainer}>
       <View style={{flex: 1}}>
         <Ionicons
@@ -391,7 +402,7 @@ const CustomerHome = ({navigation}) => {
             <Slider />
           </View>
           <View style={{flex: 3}}>
-            <View style={{marginTop: 10, marginLeft: 15, flex: 1}}>
+            <View style={{marginTop: 20, marginLeft: 15, flex: 1}}>
               <Text style={styles.text3}>TOP FEATURES</Text>
             </View>
             <View style={{flex: 8}}>
@@ -401,6 +412,7 @@ const CustomerHome = ({navigation}) => {
         </View>
       </View>
     </View>
+    </ScrollView>
   );
 };
 

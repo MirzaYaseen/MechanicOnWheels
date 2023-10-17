@@ -56,10 +56,10 @@ const MechanicSelectingCustomer = ({navigation, route}) => {
         requestDetails,
       );
 
-      alert('Successfull');
+      Alert.alert('Successfull');
     } catch (err) {
       console.log(err.response.data);
-      alert(err.response.data.message);
+      Alert.alert(err.response.data.message);
     }
   };
 
@@ -87,7 +87,7 @@ const MechanicSelectingCustomer = ({navigation, route}) => {
       setCondition(false);
     } catch (err) {
       console.log(err);
-      alert('Error');
+      Alert.alert('Error');
     }
   };
 
@@ -99,7 +99,7 @@ const MechanicSelectingCustomer = ({navigation, route}) => {
     socket.current.on('getUpdatedPrice', data => {
       console.log('Updated price is', data.price);
       console.log(1);
-      alert('Customer update price to ' + data.price);
+      Alert.alert('Customer update price to ' + data.price);
       if (updatedPriceCondition) {
         setPrice(data.price);
         setupdatedPriceCondition(false);
@@ -110,7 +110,7 @@ const MechanicSelectingCustomer = ({navigation, route}) => {
   useEffect(() => {
     socket.current.on('getIdToDeleteNotification', data => {
       console.log('Customer Ended the request');
-      alert('Customer Ended the request');
+      Alert.alert('Customer Ended the request');
       navigation.goBack();
     });
   }, []);
@@ -120,7 +120,7 @@ const MechanicSelectingCustomer = ({navigation, route}) => {
       console.log('Mechanic whose req is accepted is ', data.id);
       if (userdetails._id !== data.id) {
         console.log('Customer Ended the request');
-        alert('Customer Ended the request');
+        Alert.alert('Customer Ended the request');
         navigation.goBack();
       }
     });
@@ -149,7 +149,7 @@ const MechanicSelectingCustomer = ({navigation, route}) => {
         });
         setrejectionMessageCondition(false);
       } else {
-        alert('Customer decline your offer but you can send it again');
+        Alert.alert('Customer decline your offer but you can send it again');
         setrejectionMessageCondition(false);
         setButtonVisibilityCondition(false);
       }
@@ -345,7 +345,7 @@ const MechanicSelectingCustomer = ({navigation, route}) => {
                     const displayNumber = NewNumber.toString();
                     setPrice(displayNumber);
                   } else {
-                    alert('Quantity Must be atleast 1');
+                    Alert.alert('Quantity Must be atleast 1');
                   }
                 }}>
                 <Text
@@ -382,7 +382,7 @@ const MechanicSelectingCustomer = ({navigation, route}) => {
                     const displayNumber = NewNumber.toString();
                     setPrice(displayNumber);
                   } else {
-                    alert('Quantity Must be atleast 1');
+                    Alert.alert('Quantity Must be atleast 1');
                   }
                 }}>
                 <Text

@@ -97,20 +97,28 @@ const CustomerProductScreen = ({navigation, route}) => {
     // }, []);
 
     return (
-      <SliderBox
-        images={getImage}
-        sliderBoxHeight={240}
-        onCurrentImagePressed={index => console.warn(`image ${index} pressed`)}
-        dotColor="#0e98f1"
-        inactiveDotColor="white"
-        paginationBoxVerticalPadding={10}
-        // autoplay
+      <View>
+         <Image
+          source={{
+            uri: 'https://kiamotors-portqasim.com/wp-content/uploads/2020/03/Full-Car-Service.jpg',
+          }}
+          style={{borderRadius: 15, width: '92%', marginTop: 10, height: 150, justifyContent:'center', alignSelf:'center', marginBottom:20}}
+        />
+      </View>
+      // <SliderBox
+      //   images={getImage}
+      //   sliderBoxHeight={240}
+      //   onCurrentImagePressed={index => console.warn(`image ${index} pressed`)}
+      //   dotColor="#0e98f1"
+      //   inactiveDotColor="white"
+      //   paginationBoxVerticalPadding={10}
+      //   // autoplay
 
-        resizeMethod={'resize'}
-        resizeMode={'cover'}
-        ImageComponentStyle={{width: '100%'}}
-        imageLoadingColor="#0e98f1"
-      />
+      //   resizeMethod={'resize'}
+      //   resizeMode={'cover'}
+      //   ImageComponentStyle={{width: '100%'}}
+      //   imageLoadingColor="#0e98f1"
+      // />
     );
   };
 
@@ -148,7 +156,7 @@ const CustomerProductScreen = ({navigation, route}) => {
         cartData,
       );
       setcartModalVisible(!cartmodalVisible);
-      alert('Added to cart successfully');
+      Alert.alert('Added to cart successfully');
     } catch (err) {
       console.log(err.response.message);
     }
@@ -352,7 +360,7 @@ const CustomerProductScreen = ({navigation, route}) => {
                           const displayNumber = NewNumber.toString();
                           setQuantity(displayNumber);
                         } else {
-                          alert('Quantity Must be atleast 1');
+                          Alert.alert('Quantity Must be atleast 1');
                         }
                       }}>
                       <Text
@@ -390,7 +398,7 @@ const CustomerProductScreen = ({navigation, route}) => {
                           const displayNumber = NewNumber.toString();
                           setQuantity(displayNumber);
                         } else {
-                          alert('Product limit reach');
+                          Alert.alert('Product limit reach');
                         }
                       }}>
                       <Text
@@ -626,7 +634,7 @@ const CustomerProductScreen = ({navigation, route}) => {
                           const displayNumber = NewNumber.toString();
                           setbuyQuantity(displayNumber);
                         } else {
-                          alert('Quantity Must be atleast 1');
+                          Alert.alert('Quantity Must be atleast 1');
                         }
                       }}>
                       <Text
@@ -663,7 +671,7 @@ const CustomerProductScreen = ({navigation, route}) => {
                           const displayNumber = NewNumber.toString();
                           setbuyQuantity(displayNumber);
                         } else {
-                          alert('Product limit reach');
+                          Alert.alert('Product limit reach');
                         }
                       }}>
                       <Text

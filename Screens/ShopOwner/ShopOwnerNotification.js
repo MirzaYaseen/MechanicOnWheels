@@ -48,7 +48,7 @@ const ShopOwnerNotification = ({navigation}) => {
       setcondition(false);
     } catch (err) {
       console.log(err.response.data.message);
-      alert('Error');
+      Alert.alert('Error');
     }
   };
 
@@ -58,7 +58,7 @@ const ShopOwnerNotification = ({navigation}) => {
         `${port.herokuPort}/ShopOwnerBuyingNotificationRoute/deleteNotification/${id}`,
       );
 
-      alert('Deleted successfully');
+      Alert.alert('Deleted successfully');
     } catch (err) {
       console.log(err.response.message);
     }

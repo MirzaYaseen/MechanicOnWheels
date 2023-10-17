@@ -5,6 +5,7 @@ import {
   TextInput,
   TouchableOpacity,
   View,
+  Alert
 } from 'react-native';
 import Geocoder from 'react-native-geocoding';
 import MapView, {Marker} from 'react-native-maps';
@@ -31,8 +32,9 @@ const CustomerMechanic = ({navigation}) => {
   });
 
   function getAddressFromCoordinates() {
+    console.log('Ok')
     Geocoder.init('AIzaSyDNY3hGEJG1sMAJi0SbK-zBR1W_th9D7co');
-
+     console.log('Charo')
     Geocoder.from(position.latitude, position.longitude)
       .then(json => {
         var addressComponent = json.results[0].formatted_address;
@@ -84,7 +86,7 @@ const CustomerMechanic = ({navigation}) => {
         mechanicNotificationId: _id,
       });
     } catch (err) {
-      alert(err.response.data.message);
+      Alert.alert(err.response.data.message);
     }
   };
 
@@ -228,7 +230,7 @@ const CustomerMechanic = ({navigation}) => {
                 onChangeText={val => {
                   const number = Number(val);
                   if (number < 0) {
-                    alert('Price should not be negative');
+                    Alert.alert('Price should not be negative');
                   } else {
                     setprice(val);
                   }
@@ -274,7 +276,7 @@ const CustomerMechanic = ({navigation}) => {
               }}
               onPress={() => {
                 if (price === undefined || description === undefined) {
-                  alert('Please fill al fields');
+                  Alert.alert('Please fill al fields');
                 } else {
                   FindMechanic();
                 }

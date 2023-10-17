@@ -95,7 +95,7 @@ export default function SelectPaymentScreentScreen({navigation, route}) {
 
         console.log(result.data.data);
 
-        alert('Product bought successfull');
+        Alert.alert('Product bought successfull');
         navigation.goBack();
       } catch (err) {
         console.log(err.response.data);
@@ -218,7 +218,7 @@ export default function SelectPaymentScreentScreen({navigation, route}) {
 
           console.log(result.data.data);
 
-          alert('Payment successfull');
+          Alert.alert('Payment successfull');
           navigation.goBack();
         } catch (err) {
           console.log(err.response.data);

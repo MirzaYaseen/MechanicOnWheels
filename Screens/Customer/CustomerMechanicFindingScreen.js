@@ -87,10 +87,10 @@ const CustomerMechanicFindingScreen = ({navigation, route}) => {
           mechanicPhoneNumber,
         );
       } catch (err) {
-        alert(err.response.data.message);
+        Alert.alert(err.response.data.message);
       }
     } catch (err) {
-      alert(err.response.data.message);
+      Alert.alert(err.response.data.message);
     }
   };
   //Update request send to mechanic
@@ -111,7 +111,7 @@ const CustomerMechanicFindingScreen = ({navigation, route}) => {
       });
     } catch (err) {
       console.log(err.response.data);
-      alert(err.response.data.message);
+      Alert.alert(err.response.data.message);
     }
   };
 
@@ -162,7 +162,7 @@ const CustomerMechanicFindingScreen = ({navigation, route}) => {
       });
     } catch (err) {
       console.log(err.response.data);
-      alert(err.response.data.message);
+      Alert.alert(err.response.data.message);
     }
   };
   //Delete Customer Notification of getting mechanic
@@ -183,7 +183,7 @@ const CustomerMechanicFindingScreen = ({navigation, route}) => {
       navigation.goBack();
     } catch (err) {
       console.log(err.response.data);
-      alert(err.response.data.message);
+      Alert.alert(err.response.data.message);
     }
   };
 
@@ -198,7 +198,7 @@ const CustomerMechanicFindingScreen = ({navigation, route}) => {
       setCondition(false);
     } catch (err) {
       console.log(err);
-      alert('Error');
+      Alert.alert('Error');
     }
   };
 
@@ -644,7 +644,7 @@ const CustomerMechanicFindingScreen = ({navigation, route}) => {
                     const displayNumber = NewNumber.toString();
                     setPrice(displayNumber);
                   } else {
-                    alert('Quantity Must be atleast 1');
+                    Alert.alert('Quantity Must be atleast 1');
                   }
                 }}>
                 <Text
@@ -681,7 +681,7 @@ const CustomerMechanicFindingScreen = ({navigation, route}) => {
                     const displayNumber = NewNumber.toString();
                     setPrice(displayNumber);
                   } else {
-                    alert('Quantity Must be atleast 1');
+                    Alert.alert('Quantity Must be atleast 1');
                   }
                 }}>
                 <Text

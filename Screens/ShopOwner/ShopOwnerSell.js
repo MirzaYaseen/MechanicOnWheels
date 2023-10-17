@@ -99,9 +99,9 @@ const ShopOwnerSell = ({navigation}) => {
         productData,
       );
 
-      alert('Product posted successfully');
+      Alert.alert('Product posted successfully');
     } catch (err) {
-      alert(err.response.data.message);
+      Alert.alert(err.response.data.message);
     }
   };
 
@@ -558,7 +558,7 @@ const ShopOwnerSell = ({navigation}) => {
                     onChangeText={val => {
                       const getPrice = Number(val);
                       if (getPrice < 0) {
-                        alert('Price should be positive');
+                        Alert.alert('Price should be positive');
                       } else {
                         setprice(val);
                       }
@@ -632,7 +632,7 @@ const ShopOwnerSell = ({navigation}) => {
                     onChangeText={val => {
                       const getQuantity = Number(val);
                       if (getQuantity < 0) {
-                        alert('Quantity should be positive');
+                        Alert.alert('Quantity should be positive');
                       } else {
                         setquantity(val);
                       }
@@ -663,7 +663,7 @@ const ShopOwnerSell = ({navigation}) => {
                     ) {
                       postAd();
                     } else {
-                      alert('Enter all fields please!!!');
+                      Alert.alert('Enter all fields please!!!');
                     }
                   }}>
                   <Text

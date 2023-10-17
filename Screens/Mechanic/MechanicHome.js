@@ -8,6 +8,7 @@ import {
   Image,
   View,
   Modal,
+Alert
 } from 'react-native';
 import {useIsFocused} from '@react-navigation/native';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
@@ -69,7 +70,7 @@ const MechanicHome = ({navigation}) => {
       // console.log(result.data.data);
     } catch (err) {
       console.log(err.response.data);
-      alert('Error');
+      Alert.alert('Error');
     }
   };
 
@@ -109,14 +110,15 @@ const MechanicHome = ({navigation}) => {
       setCondition(false);
     } catch (err) {
       console.log(err);
-      alert('Error');
+      Alert.alert('Error');
     }
   };
 
   //Getting mechanic Coordinates
   function getAddressFromCoordinates() {
+    console.log('Charo bhai')
     Geocoder.init('AIzaSyDNY3hGEJG1sMAJi0SbK-zBR1W_th9D7co');
-
+    console.log('Charo yaar')
     Geocoder.from(position.latitude, position.longitude)
       .then(json => {
         var addressComponent = json.results[0].formatted_address;

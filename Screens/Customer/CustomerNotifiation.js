@@ -49,7 +49,7 @@ const CustomerNotifiation = ({navigation}) => {
       setcondition(false);
     } catch (err) {
       console.log(err.response.data.message);
-      alert('Error');
+      Alert.alert('Error');
     }
   };
 
@@ -59,7 +59,7 @@ const CustomerNotifiation = ({navigation}) => {
         `${port.herokuPort}/CustomerBuyingNotificationRoute/deleteNotification/${id}`,
       );
 
-      alert('Deleted successfully');
+      Alert.alert('Deleted successfully');
     } catch (err) {
       console.log(err.response.message);
     }
@@ -99,10 +99,10 @@ const CustomerNotifiation = ({navigation}) => {
       };
       const result = await axios.post(`${port.herokuPort}/review`, postDetails);
       setModalVisible(false);
-      alert('Thanks for your response');
+      Alert.alert('Thanks for your response');
     } catch (err) {
       if (err.response.data.message.startsWith('E11000')) {
-        alert('You already posted a on this product review');
+        Alert.alert('You already posted a on this product review');
       }
       setModalVisible(false);
 
@@ -289,7 +289,7 @@ const CustomerNotifiation = ({navigation}) => {
               <TouchableOpacity
                 onPress={() => {
                   if (userReview.length === 0 || userRating === 0) {
-                    alert('Review and Rating can not be empty');
+                    Alert.alert('Review and Rating can not be empty');
                   } else {
                     console.log(userRating);
                     postReview();

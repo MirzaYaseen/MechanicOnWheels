@@ -50,20 +50,28 @@ const CustomerVehicleBuyDetails = ({navigation, route}) => {
     // }, []);
 
     return (
-      <SliderBox
-        images={getImage}
-        sliderBoxHeight={280}
-        onCurrentImagePressed={index => console.warn(`image ${index} pressed`)}
-        dotColor="#0e98f1"
-        inactiveDotColor="white"
-        paginationBoxVerticalPadding={10}
-        // autoplay
+      <View>
+         <Image
+          source={{
+            uri: 'https://kiamotors-portqasim.com/wp-content/uploads/2020/03/Full-Car-Service.jpg',
+          }}
+          style={{borderRadius: 15, width: '92%', marginTop: 10, height: 150, justifyContent:'center', alignSelf:'center', marginBottom:20}}
+        />
+      </View>
+      // <SliderBox
+      //   images={getImage}
+      //   sliderBoxHeight={280}
+      //   onCurrentImagePressed={index => console.warn(`image ${index} pressed`)}
+      //   dotColor="#0e98f1"
+      //   inactiveDotColor="white"
+      //   paginationBoxVerticalPadding={10}
+      //   // autoplay
 
-        resizeMethod={'resize'}
-        resizeMode={'cover'}
-        ImageComponentStyle={{width: '100%'}}
-        imageLoadingColor="#0e98f1"
-      />
+      //   resizeMethod={'resize'}
+      //   resizeMode={'cover'}
+      //   ImageComponentStyle={{width: '100%'}}
+      //   imageLoadingColor="#0e98f1"
+      // />
     );
   };
   return (

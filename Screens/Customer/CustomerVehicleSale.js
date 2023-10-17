@@ -12,6 +12,7 @@ import {
   Pressable,
   FlatList,
   ListItem,
+  Alert
 } from 'react-native';
 // import Constants from 'expo-constants';
 import port from '../Port/Port';
@@ -119,10 +120,10 @@ const CustomerVehicleSale = ({navigation, route}) => {
       );
       console.log(result.data);
 
-      alert('Ad posted successfully');
+      Alert.alert('Ad posted successfully');
     } catch (err) {
       console.log('Error', err);
-      alert(err.response.data.message);
+      Alert.alert(err.response.data.message);
     }
 
     // fetch(`${port.herokuPort}/car/addcar`, {

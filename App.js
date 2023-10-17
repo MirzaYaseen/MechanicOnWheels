@@ -85,115 +85,186 @@ export default function App() {
           {/* Welcome Screen */}
           <Stack.Screen name="Welcome" component={WelcomeScreen} />
           {/* Login Screen */}
+
           <Stack.Screen name="Login" component={LoginScreen} />
+
+          {/*Signup Screen */}
           <Stack.Screen name="SignUp" component={SignupScreen} />
+
+          {/*Customer Signup Screen */}
           <Stack.Screen name="SignUpCustomer" component={SignupCustomer} />
+
           {/* Shop Owner */}
           <Stack.Screen
             name="ShopOwnerEditProduct"
             component={ShopOwnerEditProduct}
           />
+
+          {/*Shop Owner Edit Profile Screen */}
           <Stack.Screen
             name="ShopOwnerEditProfile"
             component={ShopOwnerEditProfile}
           />
+
+          {/*Shop Owner Enter Shop Screen */}
           <Stack.Screen
             name="ShopOwner EnterShop"
             component={ShopOwnerEnterShop}
           />
+
+          {/*Shop Owner Edit Shop Screen */}
           <Stack.Screen
             name="ShopOwner EditShop"
             component={ShopOwnerEditShop}
           />
+
+          {/*Shop Owner View Shop Screen */}
           <Stack.Screen
             name="ShopOwnerViewShop"
             component={ShopOwnerViewShop}
           />
+
+          {/*Select City For Ad Screen */}
           <Stack.Screen name="SelectCityForAd" component={SelectCityForAd} />
+
+          {/*Find Mechanic Screen */}
           <Stack.Screen name="SelectCategory" component={SelectCategory} />
+
+          {/*Find Mechanic Screen */}
           <Stack.Screen
             name="ShopOwnerInterface"
             component={ShopOwnerInterface}
           />
+          {/*Delete Shop Screen */}
           <Stack.Screen name="Delete Shop" component={DeleteShop} />
+
+          {/*Edit Shop Screen */}
           <Stack.Screen name="EditShopPre" component={EditShopPre} />
+
+          {/*Setting Screen */}
           <Stack.Screen name="Setting" component={Setting} />
+
+          {/*Shop Owner Notification Screen */}
           <Stack.Screen
             name="ShopOwnerNotification"
             component={ShopOwnerNotification}
           />
+
+          {/*Shop Owner Profile Screen */}
           <Stack.Screen name="ShopOwnerProfile" component={ShopOwnerProfile} />
+
           {/* Customer Screens */}
           <Stack.Screen
             name="CustomerProductList"
             component={CustomerProductList}
           />
+
+          {/*Customer Product Screen */}
           <Stack.Screen
             name="CustomerProductScreen"
             component={CustomerProductScreen}
           />
+
+          {/*Customer Home Screen */}
           <Stack.Screen
             name="CustomerInterface"
             component={CustomerInterface}
           />
+
+          {/*Car Products Screen */}
           <Stack.Screen
             name="CustomerShopOwnerProducts"
             component={CustomerShopOwnerProducts}
           />
+
+          {/*Stripe Payment Screen */}
           <Stack.Screen
             name="SelectPaymentScreen"
             component={SelectPaymentScreen}
           />
+
+          {/*Customer Checkout Screen */}
           <Stack.Screen name="CheckoutScreen" component={CheckoutScreen} />
+
+          {/*Reviews Screen */}
           <Stack.Screen name="AllReviewScreen" component={AllReviewScreen} />
+
+          {/*Customer Cart Screen */}
           <Stack.Screen name="CartScreen" component={CartScreen} />
+
+          {/*Customer Notification Screen */}
           <Stack.Screen
             name="CustomerNotifiation"
             component={CustomerNotifiation}
           />
+
+          {/*Customer Edit Profile Screen */}
           <Stack.Screen
             name="CustomerEditProfile"
             component={CustomerEditProfile}
           />
+
+          {/*Shop Owner Screen */}
           <Stack.Screen
             name="CustomerShopOwnerDetails"
             component={CustomerShopOwnerDetails}
           />
+
+          {/*Find Mechanic Screen */}
           <Stack.Screen
             name="CustomerMechanicFindingScreen"
             component={CustomerMechanicFindingScreen}
           />
+
+          {/* Customer Mechanic Screen */}
           <Stack.Screen
             name="CustomerMechanicComingScreen"
             component={CustomerMechanicComingScreen}
           />
+
+          {/* Customer Vehicle Sale Screen */}
           <Stack.Screen
             name="CustomerVehicleSale"
             component={CustomerVehicleSale}
           />
+
+          {/* Customer Buy Vehicle Screen */}
           <Stack.Screen
             name="CustomerVehicleBuy"
             component={CustomerVehicleBuy}
           />
+
+          {/* Buy Vehicle Screen */}
           <Stack.Screen
             name="CustomerVehicleBuyDetails"
             component={CustomerVehicleBuyDetails}
           />
+
+          {/* Select City DropDown Screen */}
           <Stack.Screen name="SelectCity" component={SelectCity} />
+
+          {/* Select Car Name Screen */}
           <Stack.Screen name="SelectCarName" component={SelectCarName} />
+
           {/* Mechainc Screen */}
           <Stack.Screen
             name="MechanicInterface"
             component={MechanicInterface}
           />
+
+          {/* Mechainc Selecting Cutomer */}
           <Stack.Screen
             name="MechanicSelectingCustomer"
             component={MechanicSelectingCustomer}
           />
+
+          {/* Mechainc View Screen */}
           <Stack.Screen
             name="MechanicComingToCustomerScreen"
             component={MechanicComingToCustomerScreen}
           />
+
+          {/* Mechainc Edit Profile Screen */}
           <Stack.Screen
             name="MechanicEditProfile"
             component={MechanicEditProfile}
@@ -201,16 +272,25 @@ export default function App() {
 
           {/* Messenger */}
           <Stack.Screen name="Messenger" component={Messenger} />
+
+          {/*Chat UI Screen */}
           <Stack.Screen name="ChatScreen" component={ChatScreen} />
+
+          {/* Customer Chat UI Screen */}
           <Stack.Screen
             name="CustomerChatScreen"
             component={CustomerChatScreen}
           />
+
+          {/* Mechanic Chat UI Screen */}
           <Stack.Screen
             name="MechanicChatScreen"
             component={MechanicChatScreen}
           />
+
+          {/* Search Flatlist Screen */}
           <Stack.Screen name="SearchUser" component={SearchUser} />
+
           {/* Feeback */}
           <Stack.Screen name="Feedback" component={Feedback} />
         </Stack.Navigator>
