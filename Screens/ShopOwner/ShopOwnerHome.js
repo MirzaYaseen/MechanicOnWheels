@@ -203,7 +203,7 @@ const ShopOwnerHome = ({navigation}) => {
               </TouchableOpacity>
             </View>
           </TouchableOpacity>
-
+{/* 
           <TouchableOpacity
             style={styles.buttonstyle2}
             onPress={() => {
@@ -241,7 +241,7 @@ const ShopOwnerHome = ({navigation}) => {
                 <AntDesign name="arrowright" size={22} color={'white'} />
               </TouchableOpacity>
             </View>
-          </TouchableOpacity>
+          </TouchableOpacity> */}
 
           <TouchableOpacity
             style={styles.buttonstyle2}

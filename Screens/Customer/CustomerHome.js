@@ -145,7 +145,7 @@ const CustomerHome = ({navigation}) => {
             </TouchableOpacity>
           </View>
 
-          <View style={{flex: 1}}>
+          {/* <View style={{flex: 1}}>
             <TouchableOpacity
               style={styles.buttonstyle2}
               onPress={() => {
@@ -180,7 +180,7 @@ const CustomerHome = ({navigation}) => {
                 </TouchableOpacity>
               </View>
             </TouchableOpacity>
-          </View>
+          </View> */}
           <View style={{flex: 1}}>
             <TouchableOpacity
               style={styles.buttonstyle2}
@@ -226,7 +226,7 @@ const CustomerHome = ({navigation}) => {
             marginTop: 10,
             flex: 1,
           }}>
-          <View style={{flex: 1}}>
+          {/* <View style={{flex: 1}}>
             <TouchableOpacity
               style={styles.buttonstyle2}
               onPress={() => {
@@ -263,14 +263,14 @@ const CustomerHome = ({navigation}) => {
                 </TouchableOpacity>
               </View>
             </TouchableOpacity>
-          </View>
+          </View> */}
 
           <View style={{flex: 1}}>
             <TouchableOpacity
               style={styles.buttonstyle}
-              onPress={() => {
-                navigation.navigate('CustomerVehicleBuy');
-              }}>
+              // onPress={() => {
+              //   navigation.navigate('CustomerVehicleBuy');}}
+                >
               <View
                 style={{
                   flex: 4.5,
@@ -291,8 +291,8 @@ const CustomerHome = ({navigation}) => {
                     uri: 'https://cdn-icons-png.flaticon.com/512/1019/1019607.png',
                   }}
                 />
-                <Text style={styles.text4}>Buy Vehicle</Text>
-                <Text style={styles.text5}>Easy to Buy</Text>
+                <Text style={styles.text4}>Chat Messenger</Text>
+                <Text style={styles.text5}>Attract to Mechanics</Text>
               </View>
 
               <View
@@ -376,7 +376,7 @@ const CustomerHome = ({navigation}) => {
           <Text style={styles.text1}>
             Welcome, {userdetails.firstname} {userdetails.lastname}
           </Text>
-          <TouchableOpacity
+          {/* <TouchableOpacity
             style={{marginRight: 5}}
             onPress={() => {
               navigation.navigate('Messenger');
@@ -387,7 +387,7 @@ const CustomerHome = ({navigation}) => {
               color={Font.ButtonColor}
               style={{marginRight: 5}}
             />
-          </TouchableOpacity>
+          </TouchableOpacity> */}
         </View>
         <View style={{marginBottom: 15, marginLeft: 15}}>
           <Text style={styles.text2}>

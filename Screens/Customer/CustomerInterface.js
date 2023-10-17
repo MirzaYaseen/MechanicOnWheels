@@ -33,7 +33,8 @@ function CustomerInterface({navigation, route}) {
                 color={color}
               />
             );
-          } else if (route.name === 'Prediction') {
+          } 
+          else if (route.name === 'Prediction') {
             return (
               <View
                 style={{
